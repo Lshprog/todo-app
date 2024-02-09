@@ -62,7 +62,7 @@ func (s *AuthService) ParseToken(accessToken string) (int, error) {
 	})
 
 	if err != nil {
-		return 0, nil
+		return 0, err
 	}
 
 	claims, ok := token.Claims.(*tokenClaims)
